@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+    
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\Reor.Software.PROJECT.Infrastructure\Reor.Software.PROJECT.Infrastructure.csproj" />
+      <ProjectReference Include="..\Reor.Software.PROJECT.Presentation\Reor.Software.PROJECT.Presentation.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Jake Bailey-Saltmarsh",
+  "classifications": [ "Reor Template", "Web API", "Minimal API" ],
+  "identity": "Reor.Software.Templates.MinApi",
+  "name": "Reor Minimal API",
+  "shortName": "reor-minapi",
+  "sourceName":"PROJECT",
+  "tags": {
+    "language": "C#",
+    "type": "solution"
+  }
+}

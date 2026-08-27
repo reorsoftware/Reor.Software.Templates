@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/files/">
+    <File Path=".gitignore" />
+    <File Path="Directory.build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="Reor.Software.PROJECT.Application/Reor.Software.PROJECT.Application.csproj" />
+  <Project Path="Reor.Software.PROJECT.Domain/Reor.Software.PROJECT.Domain.csproj" />
+  <Project Path="Reor.Software.PROJECT.Infrastructure/Reor.Software.PROJECT.Infrastructure.csproj" />
+  <Project Path="Reor.Software.PROJECT.Presentation/Reor.Software.PROJECT.Presentation.csproj" />
+  <Project Path="Reor.Software.PROJECT.WebHost/Reor.Software.PROJECT.WebHost.csproj" />
+</Solution>

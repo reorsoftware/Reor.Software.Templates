@@ -1,0 +1,6 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <ProjectReference Include="..\Reor.Software.PROJECT.Application\Reor.Software.PROJECT.Application.csproj" />
+  </ItemGroup>
+</Project>
