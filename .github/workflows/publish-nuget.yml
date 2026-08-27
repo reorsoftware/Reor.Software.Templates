@@ -31,7 +31,7 @@ jobs:
         run: dotnet build --configuration Release --no-restore
 
       - name: Pack
-        run: dotnet pack Reor.Software.Templates.csproj --configuration Release --no-build --output ./nupkg /p:Version=${{ steps.version.outputs.version }}
+        run: dotnet pack Reor.Software.Templates.csproj --configuration Release --no-build --output ./nupkg /p:PackageVersion=${{ steps.version.outputs.version }}
 
       - name: NuGet login (OIDC → temp API key)
         uses: NuGet/login@v1
