@@ -14,8 +14,8 @@ public static class DependencyInjection
     public static IServiceCollection AddPROJECTInfrastructure(this IServiceCollection services, InfrastructureOptions? options = null)
     {
         options ??= new InfrastructureOptions();
-
-        services.AddOptions<PROJECTDbContextConfig>("Database");
+        
+        services.AddOptions<PROJECTDbContextConfig>().BindConfiguration("Database");
         services.AddDbContext<PROJECTDbContext>();
 
         services.AddScoped<IGreetingService, RecognisingGreetingService>();

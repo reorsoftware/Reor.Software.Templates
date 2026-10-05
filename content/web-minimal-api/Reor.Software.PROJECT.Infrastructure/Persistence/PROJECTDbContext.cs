@@ -30,30 +30,10 @@ public class PROJECTDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        if (_config.UseSqlite)
-        {
-            var dbPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            var dir = Path.Combine(dbPath, "Reor.Software.PROJECT");
-            var path = Path.Combine(dir, "PROJECT.db");
-            Console.Out.WriteLine($"DB in path: {path}");
-            
-            try
-            {
-                Directory.CreateDirectory(dir);
+        if (string.IsNullOrWhiteSpace(_config.ConnectionString))
+            throw new InvalidOperationException("A PostgreSQL connection string must be configured.");
 
-                var conStr = _config.ConnectionString ?? $"Filename={path}";
-                optionsBuilder.UseSqlite(conStr);
-            }
-            catch
-            {
-                throw new Exception("FAILED TO CONNECT TO DATABASE FILE FOR SQLITE");
-            }
-        }
-        else if (_config.UsePostgreSql)
-        {
-            var conStr = _config.ConnectionString;
-            optionsBuilder.UseNpgsql(conStr);
-        }
+        optionsBuilder.UseNpgsql(_config.ConnectionString);
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
