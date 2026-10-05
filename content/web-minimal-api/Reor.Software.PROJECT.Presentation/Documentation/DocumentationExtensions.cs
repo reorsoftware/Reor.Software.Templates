@@ -30,7 +30,7 @@ public static class DocumentationExtensions
         
         if (vendors.HasFlag(DocumentationVendors.Scalar)) docGroup.AddScalar();
         if (vendors.HasFlag(DocumentationVendors.Swagger)) docGroup.AddSwagger();
-        if (vendors.HasFlag(DocumentationVendors.Scalar)) docGroup.AddReDoc();
+        if (vendors.HasFlag(DocumentationVendors.ReDoc)) docGroup.AddReDoc();
 
         return routes;
     }
