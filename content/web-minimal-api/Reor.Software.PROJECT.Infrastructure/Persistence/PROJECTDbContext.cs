@@ -72,6 +72,7 @@ public class PROJECTDbContext : DbContext
             {
                 case EntityState.Added:
                     entity.Entity.CreatedAt = DateTimeOffset.Now;
+                    entity.Entity.UpdatedAt = DateTimeOffset.Now;
                     break;
                 case EntityState.Modified:
                     entity.Entity.UpdatedAt = DateTimeOffset.Now;
