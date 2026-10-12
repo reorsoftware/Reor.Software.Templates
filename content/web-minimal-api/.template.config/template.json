@@ -9,5 +9,28 @@
   "tags": {
     "language": "C#",
     "type": "solution"
+  },
+  "symbols": {
+    "PROJECT": {
+      "type": "parameter",
+      "datatype": "string",
+      "replaces": "PROJECT"
+    },
+    "PROJECT_NS": {
+      "type": "parameter",
+      "datatype": "string",
+      "defaultValue": "Reor.Software",
+      "replaces": "PROJECT_NS",
+      "name": "ns"
+    },
+    "PROJECT_LOWER": {
+      "type": "generated",
+      "generator": "casing",
+      "parameters": {
+        "source": "PROJECT",
+        "casing": "lower"
+      },
+      "replaces": "PROJECT_LOWER"
+    }
   }
 }
