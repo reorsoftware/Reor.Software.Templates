@@ -11,13 +11,11 @@ namespace PROJECT_NS.PROJECT.WebHost;
 
 public class Program
 {
-    private const string API_CLAIM = "PROJECT.api";
+    private const string API_CLAIM = "PROJECT_LOWER.api";
     
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
-
-        
         
         builder.Services.AddReorApiAuthentication();
         builder.Services.AddReorApiAuthorization("PROJECTApi", API_CLAIM, PolicyMode.All);
