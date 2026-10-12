@@ -14,6 +14,8 @@
     "PROJECT_NS": {
       "type": "parameter",
       "datatype": "string",
+      "displayName": "Namespace",
+      "description": "The root namespace prefix for the solution and its projects, e.g. Acme.Corp produces Acme.Corp.<name>.WebHost.",
       "defaultValue": "Reor.Software",
       "replaces": "PROJECT_NS",
       "fileRename": "PROJECT_NS"
