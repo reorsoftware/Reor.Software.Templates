@@ -21,7 +21,7 @@
       "datatype": "string",
       "defaultValue": "Reor.Software",
       "replaces": "PROJECT_NS",
-      "name": "ns"
+      "fileRename": "PROJECT_NS"
     },
     "PROJECT_LOWER": {
       "type": "generated",
