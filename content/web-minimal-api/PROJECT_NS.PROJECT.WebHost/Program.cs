@@ -5,6 +5,7 @@ using PROJECT_NS.PROJECT.Infrastructure;
 using PROJECT_NS.PROJECT.Presentation;
 using PROJECT_NS.PROJECT.Presentation.Cors;
 using PROJECT_NS.PROJECT.Presentation.Documentation;
+using PROJECT_NS.PROJECT.WebHost.OpenTelemetry;
 using DependencyInjection = PROJECT_NS.PROJECT.Presentation.DependencyInjection;
 
 namespace PROJECT_NS.PROJECT.WebHost;
@@ -16,6 +17,7 @@ public class Program
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+        builder.UseReorOtel();
         
         builder.Services.AddReorApiAuthentication();
         builder.Services.AddReorApiAuthorization("PROJECTApi", API_CLAIM, PolicyMode.All);

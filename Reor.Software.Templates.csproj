@@ -36,6 +36,7 @@
 
   <ItemGroup>
     <Folder Include="content\" />
+    <Folder Include="content\web-minimal-api\PROJECT_NS.PROJECT.WebHost\OpenTelemetry\" />
   </ItemGroup>
 
 </Project>
