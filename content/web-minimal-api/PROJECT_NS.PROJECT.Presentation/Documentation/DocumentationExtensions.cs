@@ -26,6 +26,7 @@ public static class DocumentationExtensions
     {
         var docGroup = routes
             .MapGroup(pathPrefix)
+            .AllowAnonymous()
             .ExcludeFromDescription();
         
         if (vendors.HasFlag(DocumentationVendors.Scalar)) docGroup.AddScalar();
